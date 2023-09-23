@@ -1,0 +1,23 @@
+{
+  "name": "mini-browser",
+  "version": "1.0.0",
+  "description": "Mini browser for use for Programming performance",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-packager . --icon assets/webview --overwrite --out=packages"
+  },
+  "author": "Matheus Souza",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "@electron-forge/publisher-github": "^6.4.2",
+    "electron": "^26.2.2"
+  },
+  "dependencies": {
+    "chokidar": "^3.5.3",
+    "electron-store": "^8.1.0",
+    "json-schema-typed": "^8.0.1"
+  }
+}
