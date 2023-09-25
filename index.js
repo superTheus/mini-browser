@@ -1,6 +1,6 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, remote } = require('electron')
 const { Tray } = require('./Tray')
-const { CreateWindow } = require('./CreateWindow')
+const { CreateWindow } = require('./CreateWindow');
 
 function App() {
   CreateWindow()
@@ -18,6 +18,7 @@ app.on('window-all-closed', () => {
 })
 
 app.on('activate', recreateWindow)
+app.commandLine.appendSwitch('disable-features', 'OutOfBlinkCors');
 
 function recreateWindow() {
   // On macOS it's common to re-create a window in the app when the

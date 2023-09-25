@@ -2,18 +2,18 @@ const { BrowserWindow } = require('electron');
 
 function CreateWindow() {
   win = new BrowserWindow({
-    width: 1500,
-    height: 1300,
-    transparent: true,
+    width: 900,
+    height: 700,
     frame: true,
     titleBarStyle: "Mini Browser Window 😁👍",
-    alwaysOnTop: false,
+    alwaysOnTop: true,
     webPreferences: {
-      nodeIntegration: true
+      nodeIntegration: true,
+      webSecurity: false,
     }
   })
 
-  win.loadURL('https://github.com/orgs/Logictec/projects/1')
+  win.loadURL('http://localhost:4200/');
 
   return win
 }
