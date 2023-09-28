@@ -3,7 +3,7 @@ const path = require('path')
 // const { userPreferences } = require('./Store.js')
 
 function Tray() {
-  const trayIcon = path.resolve(__dirname, '..', 'assets', 'webview-icon.png')
+  const trayIcon = path.resolve(__dirname, '', 'assets', 'webview-icon.png')
 
   const contextMenu = Menu.buildFromTemplate([
     {

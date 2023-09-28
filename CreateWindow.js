@@ -13,7 +13,7 @@ function CreateWindow() {
     }
   })
 
-  win.loadURL('http://localhost:4200/');
+  win.loadURL('https://chat.openai.com');
 
   return win
 }
