@@ -10,9 +10,7 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "build": "electron-packager . --icon assets/webview --overwrite --out=packages",
-    "package-win": "electron-packager . mini-browser --platform=win32 --arch=x64 --out=dist --overwrite",
-    "electron:package:mac": "yarn build && electron-builder -m -c.extraMetadata=build/electron.js",
-    "electron:package:linux": "yarn build && electron-builder -l -c.extraMetadata=build/electron.js"
+    "package-win": "electron-packager . mini-browser --platform=win32 --arch=x64 --out=dist --overwrite"
   },
   "author": "Matheus Souza",
   "email": "João Matheus Freitas de Souza",
@@ -20,6 +18,10 @@
   "private": false,
   "build": {
     "appId": "com.mini_browser.app"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "mini-browser": "yarn mini-browser"
   },
   "devDependencies": {
     "@electron-forge/publisher-github": "^6.4.2",
